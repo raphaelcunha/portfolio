@@ -1,0 +1,14 @@
+---
+import Card from "./Card.astro";
+import svgStart from "@assets/icons/start.svg";
+---
+
+<Card classProp="w-full p-1">
+  <ul
+    class="flex w-full flex-row items-center justify-center gap-2 text-xs font-semibold uppercase leading-7 tracking-tight text-secondary"
+  >
+    <li>LATEST WORK AND <span class="text-white">FEATURED</span></li>
+    <li><img src={svgStart.src} /></li>
+    <li>LATEST WORK AND <span class="text-white">FEATURED</span></li>
+  </ul>
+</Card>

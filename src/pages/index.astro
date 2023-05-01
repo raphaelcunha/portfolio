@@ -1,14 +1,36 @@
 ---
 // Component Imports
-import Button from "../components/Button.astro";
-import Layout from "../layouts/main.astro";
+import ImgSignature from "@assets/images/signature.png";
+import ImgWorks from "@assets/images/works.png";
+import CardAbout from "@components/CardAbout/index.astro";
+import Layout from "@layouts/main.astro";
+import CardImage from "@components/CardImage.astro";
+import CardKeywords from "@components/CardKeywords.astro";
 ---
 
 <Layout title="Home">
-  <div class="grid place-items-center h-screen content-center">
-    <Button>Tailwind Button in Astro!</Button>
-    <a href="/markdown-page" class="p-4 underline bg-cyan-900"
-      >Markdown is also supported...</a
-    >
+  <div class="grid grid-cols-4 grid-rows-3 gap-6">
+    <div class="col-span-2">
+      <CardAbout />
+    </div>
+    <div class="col-span-2">
+      <div class="grid grid-cols-2 gap-6">
+        <div class="col-span-full">
+          <CardKeywords />
+        </div>
+        <CardImage
+          title="About Me"
+          category="More about me"
+          image={ImgSignature}
+          imageClassProp="invert opacity-50 h-[90px]"
+        />
+        <CardImage
+          title="Projects"
+          category="Showcase"
+          image={ImgWorks}
+          imageClassProp="h-full"
+        />
+      </div>
+    </div>
   </div>
 </Layout>

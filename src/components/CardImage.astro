@@ -1,0 +1,26 @@
+---
+import Card from "@components/Card.astro";
+
+interface Props {
+  title: string;
+  category: string;
+  image: any;
+  imageClassProp?;
+}
+
+const { image, title, category, imageClassProp } = Astro.props;
+---
+
+<Card classProp="flex-col h-full justify-between p-6">
+  <div class="flex h-[126px] items-center justify-center">
+    <img src={image.src} alt={title} class={imageClassProp} />
+  </div>
+  <div class="prose px-4 dark:prose-invert">
+    <p
+      class="mb-2 text-xs font-semibold uppercase leading-4 tracking-tight text-tertiary"
+    >
+      {category}
+    </p>
+    <h2>{title}</h2>
+  </div>
+</Card>

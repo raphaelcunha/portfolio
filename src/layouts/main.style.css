@@ -1,0 +1,36 @@
+body {
+    background-color: #0F0F0F;
+}
+
+.bg-card {
+    z-index: 0;
+    background: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0.075) 10.15%,
+      rgba(255, 255, 255, 0.0125) 89.36%
+    );
+    -webkit-mask-composite: xor; /*5'*/
+            mask-composite: exclude; /*5*/
+}
+
+.bg-card:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  padding: 1px;
+  border-radius: 32px;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.075) 10%,
+    rgba(255, 255, 255, 0.0125) 90%
+  );  
+  -webkit-mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+          mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+}
