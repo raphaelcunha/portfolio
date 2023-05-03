@@ -1,0 +1,42 @@
+---
+import Card from "@components/Card.astro";
+import me from "@assets/images/me.png";
+import svgButton from "@assets/icons/icon-card-button.svg";
+---
+
+<Card classProp="sm:h-full gap-9 p-6">
+  <div class="grid grid-cols-2 gap-6 lg:grid">
+    <div class="md:hidden lg:grid">
+      <img
+        class="rounded-2xl bg-gradient-to-b from-sky-400 to-sky-200"
+        src={me.src}
+        width={me.width}
+        height={me.height}
+        alt="Raphael Cunha Developer Frontend"
+      />
+    </div>
+    <div class="col-span-1 w-full sm:col-span-1 md:col-span-2 lg:col-span-1">
+      <div class="prose flex h-full flex-col justify-start dark:prose-invert">
+        <h5
+          class="uppercase leading-5 sm:block md:hidden md:leading-5 lg:block lg:leading-6"
+        >
+          Developer and Creator
+        </h5>
+        <h1 class="my-2 md:my-4 lg:my-2">Raphael Cunha.</h1>
+        <p
+          class="m-0 hidden w-full p-0 text-sm text-secondary sm:block md:block"
+        >
+          I am a specialist FrontEnd Development in Brazil
+        </p>
+      </div>
+      <div class="absolute bottom-3 right-8 hidden sm:right-4 sm:block">
+        <img
+          src={svgButton.src}
+          width={svgButton.width}
+          height={svgButton.height}
+          alt="image description"
+        />
+      </div>
+    </div>
+  </div>
+</Card>

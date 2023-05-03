@@ -5,10 +5,14 @@ import svgStart from "@assets/icons/start.svg";
 
 <Card classProp="w-full p-1">
   <ul
-    class="flex w-full flex-row items-center justify-center gap-2 text-xs font-semibold uppercase leading-7 tracking-tight text-secondary"
+    class="flex w-full flex-row items-center justify-center gap-2 text-center text-xs font-semibold tracking-tight text-secondary sm:leading-7"
   >
-    <li>LATEST WORK AND <span class="text-white">FEATURED</span></li>
-    <li><img src={svgStart.src} /></li>
-    <li>LATEST WORK AND <span class="text-white">FEATURED</span></li>
+    <li>
+      Latest work and <span class="text-white">featured</span>
+    </li>
+    <li class="hidden sm:block"><img src={svgStart.src} /></li>
+    <li class="hidden sm:block">
+      Latest work and <span class="text-white">featured</span>
+    </li>
   </ul>
 </Card>
