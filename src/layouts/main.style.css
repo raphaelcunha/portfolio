@@ -9,8 +9,17 @@ body {
       rgba(255, 255, 255, 0.075) 10.15%,
       rgba(255, 255, 255, 0.0125) 89.36%
     );
-    -webkit-mask-composite: xor; /*5'*/
-            mask-composite: exclude; /*5*/
+   
+}
+
+.bg-card:hover {
+  transform: matrix(1.015, 0, 0, 1.015, 0, 0);
+  transition: all 0.25s ease-in;
+}
+
+.bg-card:not(:hover) {
+  transform: matrix();
+  transition: all 0.25s ease-out;
 }
 
 .bg-card:before {
@@ -20,6 +29,7 @@ body {
   inset: 0;
   padding: 1px;
   border-radius: 32px;
+  transition: opacity 0.25s linear;
   background: linear-gradient(
     120deg,
     rgba(255, 255, 255, 0.075) 10%,
