@@ -10,10 +10,13 @@ module.exports = {
         md: "768px",
         lg: "1024px",
         xl: "1280px",
-        '2xl': "1280px",
+        "2xl": "1280px",
       },
     },
     extend: {
+      backdropBlur: {
+        "4xl": "128px",
+      },
       borderRadius: {
         "4xl": "2rem", // 32px
       },

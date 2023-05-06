@@ -6,11 +6,14 @@ import CardAbout from "@components/CardAbout.astro";
 import Layout from "@layouts/main.astro";
 import CardImage from "@components/CardImage.astro";
 import CardKeywords from "@components/CardKeywords.astro";
+import CardServices from "@components/CardServices.astro";
+import CardSocial from "@components/CardSocial.astro";
+import CardClients from "@components/CardClients.astro";
 ---
 
 <Layout title="Home">
   <div
-    class="grid grid-cols-1 grid-rows-1 gap-6 sm:grid-cols-2 sm:grid-rows-3 md:grid-cols-3 lg:grid-cols-4"
+    class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
   >
     <div class="sm:col-span-2 md:col-span-1 lg:col-span-2">
       <CardAbout />
@@ -36,27 +39,25 @@ import CardKeywords from "@components/CardKeywords.astro";
     </div>
     <div>
       <CardImage
-        title="Articles"
-        category="Blog"
+        title="Projects"
+        category="Showcase"
         image={ImgWorks}
         imageClassProp="h-full"
       />
     </div>
     <div class="sm:col-span-2">
-      <CardImage
-        title="Projects"
-        category="Showcase"
+      <CardServices title="Services Offering" category="Specialization" />
+    </div>
+    <div>
+      <CardSocial
+        title="Stay with me"
+        category="Profiles"
         image={ImgWorks}
         imageClassProp="h-full"
       />
     </div>
-    <div>
-      <CardImage
-        title="Projects"
-        category="Showcase"
-        image={ImgWorks}
-        imageClassProp="h-full"
-      />
+    <div class="sm:col-span-2">
+      <CardClients />
     </div>
   </div>
 </Layout>
