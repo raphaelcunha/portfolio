@@ -1,0 +1,33 @@
+---
+import Card from "./Card.astro";
+import svgButton from "@assets/icons/icon-card-button.svg";
+import svgDetail from "@assets/icons/icon-card-detail.svg";
+---
+
+<Card classProp="h-full flex-col justify-between group">
+  <div class="ml-6 w-full">
+    <img
+      class="opacity-90 transition-opacity duration-300 ease-in-out group-hover:opacity-100"
+      src={svgDetail.src}
+      width={svgDetail.width}
+      height={svgDetail.height}
+      alt="image description"
+    />
+  </div>
+  <div class="flex w-full flex-row justify-between p-6">
+    <div class="prose dark:prose-invert">
+      <h2 class="text-5xl font-semibold">
+        Let’s <br />work <span class="text-blue-500">together</span>
+      </h2>
+    </div>
+    <div class="flex items-end justify-end">
+      <img
+        class="opacity-10 transition-opacity duration-300 ease-in-out group-hover:opacity-60"
+        src={svgButton.src}
+        width={svgButton.width * 1.2}
+        height={svgButton.height}
+        alt="image description"
+      />
+    </div>
+  </div>
+</Card>

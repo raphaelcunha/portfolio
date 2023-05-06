@@ -4,26 +4,30 @@ import Card from "@components/Card.astro";
 const cards = [
   {
     title: "Years Experience",
-    value: "07",
+    value: "14",
   },
   {
-    title: "Clients Worldwide",
-    value: "50+",
+    title: "Clients",
+    value: "+120",
   },
   {
     title: "Total Projects",
-    value: "10+",
+    value: "40",
   },
 ];
 ---
 
-<Card>
-  <div class="flex h-[146px] w-full items-center justify-center gap-6">
+<Card classProp="h-full">
+  <div
+    class="grid w-full grid-cols-1 items-center justify-center gap-6 p-8 lg:grid-cols-3"
+  >
     {
       cards.map((card) => (
-        <div class="dark:prose-invertflex-col prose flex flex-col items-center justify-center gap-2 rounded-2xl border border-neutral-800 p-5  backdrop-blur-[1px] backdrop-brightness-50">
-          <div>{card.value}</div>
-          <div>{card.title}</div>
+        <div class="dark:prose-invertflex-col prose flex w-auto flex-row items-center justify-center gap-2 rounded-2xl border border-neutral-800 p-5 backdrop-blur-[1px]  backdrop-brightness-50 sm:h-full">
+          <div class="flex w-full items-center justify-start gap-2 md:justify-center  lg:w-[86px] lg:flex-col">
+            <div class="text-3xl font-bold">{card.value}</div>
+            <div class="text-xs uppercase text-neutral-500">{card.title}</div>
+          </div>
         </div>
       ))
     }

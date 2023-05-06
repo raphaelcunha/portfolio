@@ -9,6 +9,7 @@ import CardKeywords from "@components/CardKeywords.astro";
 import CardServices from "@components/CardServices.astro";
 import CardSocial from "@components/CardSocial.astro";
 import CardClients from "@components/CardClients.astro";
+import CardTogether from "@components/CardTogether.astro";
 ---
 
 <Layout title="Home">
@@ -39,8 +40,8 @@ import CardClients from "@components/CardClients.astro";
     </div>
     <div>
       <CardImage
-        title="Projects"
-        category="Showcase"
+        title="Blog"
+        category="Articles"
         image={ImgWorks}
         imageClassProp="h-full"
       />
@@ -58,6 +59,9 @@ import CardClients from "@components/CardClients.astro";
     </div>
     <div class="sm:col-span-2">
       <CardClients />
+    </div>
+    <div class="sm:col-span-2">
+      <CardTogether />
     </div>
   </div>
 </Layout>

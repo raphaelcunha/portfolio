@@ -1,16 +1,18 @@
 ---
+import { Image, Picture } from "@astrojs/image/components";
 import Card from "@components/Card.astro";
-import me from "@assets/images/me.png";
+import me from "@assets/images/me3.png";
 import svgButton from "@assets/icons/icon-card-button.svg";
 ---
 
 <Card classProp="sm:h-full gap-9 p-6 group">
   <div class="grid grid-cols-2 gap-6 lg:grid">
     <div class="md:hidden lg:grid">
-      <img
-        class="rounded-2xl bg-gradient-to-b from-sky-400 to-sky-200"
+      <Picture
+        class="about rounded-2xl"
         src={me.src}
-        width={me.width}
+        aspectRatio="1:1"
+        widths={[198, 240, 262]}
         height={me.height}
         alt="Raphael Cunha Developer Frontend"
       />
