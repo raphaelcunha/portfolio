@@ -1,5 +1,5 @@
 ---
-import { Image, Picture } from "@astrojs/image/components";
+import { Picture } from "@astrojs/image/components";
 import Card from "@components/Card.astro";
 import me from "@assets/images/me3.png";
 import svgButton from "@assets/icons/icon-card-button.svg";
@@ -12,7 +12,7 @@ import svgButton from "@assets/icons/icon-card-button.svg";
         class="about rounded-2xl"
         src={me.src}
         aspectRatio="1:1"
-        widths={[198, 240, 262]}
+        widths={[198, 240, 262, 400, 600, 800]}
         height={me.height}
         alt="Raphael Cunha Developer Frontend"
       />

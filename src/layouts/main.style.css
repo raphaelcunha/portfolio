@@ -46,9 +46,9 @@ body {
 
 /* gradient animation  */
 .about {
-  background: linear-gradient(120deg, #f6d365, #fda085, #23a6d5, #23d5ab);
+  background: linear-gradient(120deg, #3c82f7, #88aff3,  #010101);
   background-size: 200% 200%;
-  animation: gradient 5s ease infinite;
+  animation: gradient 4s ease-in-out infinite;
 }
 
 @keyframes gradient {
@@ -63,3 +63,11 @@ body {
   }
 }
 
+.navbar > ul > li a.active {
+  color: #ffffff;
+}
+
+.navbar > ul > li a:hover:not(.active) {
+  color: #9a9797;
+  transition: all 0.25s ease-in;
+}
