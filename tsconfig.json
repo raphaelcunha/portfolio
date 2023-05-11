@@ -8,10 +8,18 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@assets/*": ["src/assets/*"],
-      "@components/*": ["src/components/*"],
-      "@layouts/*": ["src/layouts/*"]
-    }
+      "@assets/*": [
+        "src/assets/*"
+      ],
+      "@components/*": [
+        "src/components/*"
+      ],
+      "@layouts/*": [
+        "src/layouts/*"
+      ]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   },
   "extends": "astro/tsconfigs/base"
 }
