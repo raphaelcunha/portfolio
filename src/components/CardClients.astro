@@ -26,7 +26,9 @@ const cards = [
         <div class="dark:prose-invertflex-col prose flex w-auto flex-row items-center justify-center gap-2 rounded-2xl border border-neutral-800 p-5 backdrop-blur-[1px]  backdrop-brightness-50 sm:h-full">
           <div class="flex w-full items-center justify-start gap-2 md:justify-center  lg:w-[86px] lg:flex-col">
             <div class="text-3xl font-bold">{card.value}</div>
-            <div class="text-xs uppercase text-neutral-500">{card.title}</div>
+            <div class="text-center text-xs uppercase text-neutral-500">
+              {card.title}
+            </div>
           </div>
         </div>
       ))
