@@ -10,7 +10,7 @@ export default defineConfig({
   experimental: {
     assets: true,
   },
-  integrations: [tailwind(), image(), react()],
+  integrations: [tailwind(), react()],
   output: "server",
   adapter: vercel({
     analytics: true,
